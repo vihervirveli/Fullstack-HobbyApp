@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>HobbyApp Frontpage</title>
+</head>
+
+<body onload="init()">
+    <div id="content">
+    <div id="container">
+        <h1>Harrastuslista</h1>
+        <h2>Lisää uusi harrastus</h2>
+        <fieldset>
+            <legend>Pakolliset harrastustiedot</legend>
+        <div>
+            <label for="newHobbyName">Uuden harrastuksen nimi</label><br>
+            <input type="text" id="newHobbyName" required/><br>
+        </div>
+        <div id="varoitus"></div>
+    </fieldset>
+    <fieldset>
+        <legend>Muut harrastustiedot</legend>
+        <div class="valinnat">
+            <div>
+                <input type="checkbox" id="outsidehobbybool" name="outsidehobbybool" value="outsidehobbybool" />
+                <label for="outsidehobbybool">Ulkoharrastus</label>
+            </div>
+            <div>
+                <input type="checkbox" id="insidehobbybool" name="insidehobbybool" value="insidehobbybool" />
+                <label for="insidehobbybool">Sisäharrastus</label>
+            </div>
+            <div>
+                <input type="checkbox" id="toolsbool" name="toolsbool" value="toolsbool" />
+                <label for="toolsbool">Tarvitaan välineitä</label>
+            </div>
+            <div>
+                <input type="checkbox" id="peopleneededbool" name="peopleneededbool" value="peopleneededbool" />
+                <label for="peopleneededbool">Tarvitaan muita ihmisiä</label>
+            </div>
+        </div>
+        <div id="tagsdiv">
+            <label for="hobbytags">Tageja harrastukseen (erota pilkulla)</label><br>
+            <input type="text" id="hobbytags" /><br>
+        </div>
+    </fieldset>
+        <input type="button" id="addeditnamiska" value="Lisää">
+        <div id="errorsubmit"></div>
+    <h2>Lajittelu</h2>
+        <div>
+            <input type="checkbox" id="outdoorcheck" name="outdoorcheck" value="outdoorcheck" />
+            <label for="outdoorcheck">Näytä ulkoharrastukset</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="indoorcheck" name="indoorcheck" value="indoorcheck" />
+            <label for="indoorcheck">Näytä sisäharrastukset</label>
+        </div>
+        <ul id="hobbiesList"></ul>
+        <p id="infoText"></p>
+    </div>
+    <div id="container2">
+        <h1>Käyttäjäpuoli</h1>
+        
+        <div id="login">
+            <h2 id="subheading">Kirjaudu sisään</h2>
+            <label for="username">Käyttäjätunnuksesi</label><br>
+            <input type="text" id="username"  required/><br>
+            <label for="password">Salasanasi</label><br>
+            <input type="password" id="password" required/><br>
+            <input type="submit" id="kirjaudu" value="Kirjaudu"/><br>
+        </div>
+        <div id="loggedin">
+            <h2 id="loggedininfo"></h2>
+            <span id="loggedinuser"></span><br>
+            <span id="loginid"></span></br>
+            <input type="button" id="uloskirjaudu" value="Uloskirjaudu"/><br>
+            <span id="loggedinuserid"></span>
+           <div id="userinharrastusdivicontainer">
+            <ul id="userinOmatHarrastukset"></ul>
+        </div>
+        </div>
+    </div>
+</div>
+    <script src="code.js"></script>
+</body>
+
+</html>
